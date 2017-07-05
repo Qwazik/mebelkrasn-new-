@@ -1,0 +1,110 @@
+extends _template
+
+block main
+	// catalog
+	.home-catalog
+		.container
+			.col-34
+				.home-catalog__col.home
+					.header
+						.dt--icon-box
+							.dtc: i.icm.icon-forhome
+							.dtc <b>мебель</b> для дома
+					ul.menu
+						li: a(href="#") Мебель для кухни
+						li: a(href="#") Мягкая мебель
+						li: a(href="#") Мебель для спальни
+						li: a(href="#") Мебель для гостиной
+						li: a(href="#") Шкафы и шкафы-купе
+						li: a(href="#") Обеденные группы
+						li: a(href="#") Детская мебель
+						li: a(href="#") Мебель для прихожей
+						li: a(href="#") Компьютерные столы
+						li: a(href="#") Кресла-качалки
+			.col-66  
+				.row
+					.col-55
+						.home-catalog__col.office
+							.header 
+								.dt--icon-box
+									.dtc: i.icm.icon-foroffice
+									.dtc <b>мебель</b> для офиса
+							ul.menu
+								li: a(href="#") Мебель для персонала
+								li: a(href="#") Кресла, стулья для руководства
+								li: a(href="#") Кресла, стулья для персонала
+								li: a(href="#") Стулья для баров и кафе
+								li: a(href="#") Вешалки
+					.col-45
+						.home-catalog__col.home-catalog__banner
+							.header
+								Цены ниже<br>
+								у конкурента?
+								<b>получите<br>
+								скидку</b>
+							a(href="#").btn.btn--white Подробнее
+					.col-100
+						.home-catalog__col
+							.header
+								.dt--icon-box
+									.dtc: i.icm.icon-discount
+									.dtc 
+										<b>беспроцентная <br> рассрочка!</b>
+										p Оставь заявку — узнай подробности
+							.form.dt
+								.dtc: input(type="text" placeholder="Имя").input
+								.dtc: input(type="tel" placeholder="Телефон").input
+								.dtc: button(type="submit").icm.icon-saml
+	.home-preview
+		.container
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.row
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview1.jpg')")
+									.mark.new
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										.price-btn
+											span.price 69 000 ₽
+											a(href="#") Купить
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview2.jpg')")
+									.mark.super
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										.price-btn
+											span.price 69 000 ₽
+											a(href="#") Купить
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview3.jpg')")
+									.mark.max
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										.price-btn
+											span.price 69 000 ₽
+											a(href="#") Купить
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview4.jpg')")
+									.mark.sale
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										.price-btn
+											span.price 69 000 ₽
+											a(href="#") Купить
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview5.jpg')")
+									.mark.new
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										.price-btn
+											span.price 69 000 ₽
+											a(href="#") Купить
+							.col-33
+								.home-preview__item(style="background-image:url('../img/catalog-preview6.jpg')")
+									.mark.super-big
+									.front-block
+										.name «Юля» <br> Кухня модульная
+										a(href="#").btn.btn--white Узнать больше
+				.swiper-pagination
