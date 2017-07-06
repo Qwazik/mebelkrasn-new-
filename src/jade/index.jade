@@ -1,7 +1,7 @@
 extends _template
 
 block main
-	// catalog
+	// home-catalog
 	.home-catalog
 		.container
 			.col-34
@@ -36,14 +36,13 @@ block main
 								li: a(href="#") Стулья для баров и кафе
 								li: a(href="#") Вешалки
 					.col-45
-						.home-catalog__col.home-catalog__banner
+						.home-catalog__col.home-catalog__banner.angle.angle--bl
+							p Цены ниже <br> у конкурента?
 							.header
-								Цены ниже<br>
-								у конкурента?
 								<b>получите<br>
 								скидку</b>
 							a(href="#").btn.btn--white Подробнее
-					.col-100
+					.col-100.fadeInRightShort.wow
 						.home-catalog__col
 							.header
 								.dt--icon-box
@@ -51,60 +50,233 @@ block main
 									.dtc 
 										<b>беспроцентная <br> рассрочка!</b>
 										p Оставь заявку — узнай подробности
-							.form.dt
+							.form-block.dt
 								.dtc: input(type="text" placeholder="Имя").input
 								.dtc: input(type="tel" placeholder="Телефон").input
 								.dtc: button(type="submit").icm.icon-saml
+	// home-preview
 	.home-preview
 		.container
-			.swiper-container
+			.swiper-container#catalogSlider
 				.swiper-wrapper
-					.swiper-slide
-						.row
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview1.jpg')")
-									.mark.new
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										.price-btn
-											span.price 69 000 ₽
-											a(href="#") Купить
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview2.jpg')")
-									.mark.super
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										.price-btn
-											span.price 69 000 ₽
-											a(href="#") Купить
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview3.jpg')")
-									.mark.max
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										.price-btn
-											span.price 69 000 ₽
-											a(href="#") Купить
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview4.jpg')")
-									.mark.sale
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										.price-btn
-											span.price 69 000 ₽
-											a(href="#") Купить
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview5.jpg')")
-									.mark.new
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										.price-btn
-											span.price 69 000 ₽
-											a(href="#") Купить
-							.col-33
-								.home-preview__item(style="background-image:url('../img/catalog-preview6.jpg')")
-									.mark.super-big
-									.front-block
-										.name «Юля» <br> Кухня модульная
-										a(href="#").btn.btn--white Узнать больше
-				.swiper-pagination
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.row
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview1.jpg')")
+										.mark.new
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											.price-btn
+												span.price 69 000 <i class="icm icon-rouble"></i>
+												a(href="#") Купить
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview2.jpg')")
+										.mark.super
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											.price-btn
+												span.price 69 000 <i class="icm icon-rouble"></i>
+												a(href="#") Купить
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview3.jpg')")
+										.mark.max
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											.price-btn
+												span.price 69 000 <i class="icm icon-rouble"></i>
+												a(href="#") Купить
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview4.jpg')")
+										.mark.sale
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											.price-btn
+												span.price 69 000 <i class="icm icon-rouble"></i>
+												a(href="#") Купить
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview5.jpg')")
+										.mark.new
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											.price-btn
+												span.price 69 000 <i class="icm icon-rouble"></i>
+												a(href="#") Купить
+								.col-33
+									.wow.fadeInUpShort.home-preview__item(style="background-image:url('../img/catalog-preview6.jpg')")
+										.mark.super-big
+										.front-block
+											.name «Юля» <br> Кухня модульная
+											a(href="#").btn.btn--white Узнать больше
+				.control-panel
+					button.swiper-button-prev: i.icm.icon-artl
+					.swiper-pagination
+					button.swiper-button-next: i.icm.icon-artr
+	//kreslo text
+	.kreslo-text
+		.container
+			.top
+				h1.fadeInRightShort.wow Салон «Стиль» — <br> мебель в Краснодаре<br> по доступной цене
+			.bot
+				p.fadeInUpShort.wow Приходя в мебельный салон, покупатель надеется найти то, что будет полностью соответствовать его представлениям о красоте и комфорте. В салоне мебели «Стиль» мы собрали ассортимент на самый взыскательный вкус. Мы понимаем, как важно подобрать мебель, которая будет <b>идеально сочетаться с интерьером</b>.
+				button.icm.icon-lartb.fadeIn.wow
+	//feedback
+	.feedback-advice
+		.container
+			.feedback-advice__body.color-white.fadeInUpShort.wow
+				p.title Возник вопрос ?
+				p Получи <b>бесплатную консультацию</b>
+				.form-block.form-block--dark.dt
+					.dtc: input(type="text" placeholder="Имя").input
+					.dtc: input(type="tel" placeholder="Телефон").input
+					.dtc: button(type="submit").icm.icon-saml
+	section.home-about
+		.container
+			h2 Наш ассортимент
+			.content.column2
+				p Ассортимент мебельного салона «Стиль» поразит вас разнообразием стилей. Вы найдете у нас все, что нужно для составления любого интерьера – <b>от классики до хай-тек</b>. Наличие собственного производства позволяет предлагать клиентам выбор цветового решения и варьировать размер каждого изделия. Если вам нужна помощь в выборе – наши сотрудники с удовольствием подберут для вас лучший вариант.
+				p Вся продукция, представленная на сайте нашего Интернет-магазина мебели и в салонах, соответствует высокому уровню качества. Экологическая чистота это важное условие при выборе материалов для изготовления мебели. В нашей мебели используется материалы, качество которых подтверждено <b >сертификатами</b> соответствия. Наша мебель исключительно безопасна и подойдет даже для людей, страдающих аллергическими реакциями и детей.
+				p Мы предлагаем нашим покупателям приобретать мебель недорого, что особенно выгодно для людей со средним достатком. Все цены можно увидеть <a href="#">в каталоге на сайте</a>, также каждый клиент может воспользоваться специальными предложениями, вся информация о которых указана здесь же.
+				p Покупать у нас не только выгодно, но и удобно — мы отгружаем мебель со склада в день оплаты заказа. Также мы предоставляем бесплатные услуги замерщика, выполняем индивидуальные нестандартные заказы.
+			.text-area--blue.color-white.angle.angle--br.wow.fadeInUpShort
+				p.smalltt Нашли аналогичный товар у конкурента по цене ниже нашей?
+				p.title Сообщите нам и Получите скидку
+				a.btn.btn--white(href="#") Сообщить менеджеру
+	section.furniture-office
+		.container
+			.dt--va
+				.dtc.wow.fadeInLeftShort
+					h2 Мебель для оформления домашнего интерьера
+				.dtc.ta-right.wow.fadeInLeftShort(data-wow-delay="0.7s")
+					a(href="#").btn.btn--transp 
+						| В каталог 
+						i.icm.icon-lartr
+			.content
+				p Каждый может купить мебель для дома в Краснодаре дешево, изучив <a href="#">каталог</a> товаров. На нашей странице в сети можно увидеть детальные и красочные фото всех моделей. Мы предлагаем нашим клиентам следующие товары:
+			ul.category-menu
+				li.wow.fadeIn: a(href="#")
+					i.icm.icon-cat1
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.2s"): a(href="#")
+					i.icm.icon-forhome
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.4s"): a(href="#")
+					i.icm.icon-cat3
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.6s"): a(href="#")
+					i.icm.icon-cat4
+					p Кухонная <br> мебель
+				li.wow.fadeIn: a(href="#")
+					i.icm.icon-cat5
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.2s"): a(href="#")
+					i.icm.icon-cat6
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.4s"): a(href="#")
+					i.icm.icon-cat7
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.6s"): a(href="#")
+					i.icm.icon-cat8
+					p Кухонная <br> мебель
+				li.wow.fadeIn: a(href="#")
+					i.icm.icon-cat9
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.2s"): a(href="#")
+					i.icm.icon-cat10
+					p Кухонная <br> мебель
+				li.wow.fadeIn(data-wow-delay="0.4s"): a(href="#")
+					i.icm.icon-cat11
+					p Кухонная <br> мебель
+	section.furniture-office.bg-gray
+		.container
+			.dt--va
+				.dtc.wow.fadeInLeftShort
+					h2 Оформление офисных <br> помещений
+				.dtc.ta-right.wow.fadeInLeftShort(data-wow-delay="0.7s")
+					a(href="#").btn.btn--transp 
+						| В каталог 
+						i.icm.icon-lartr
+			.content
+				p Кроме оформления жилых помещений, наш салон мебели «Стиль» оказывает услуги по подбору мебели для офисов. Мы предлагаем купить офисную мебель в Краснодаре, все предложения вы можете увидеть в каталоге товаров с фото. У нас вы найдете офисную мебель всех направлений:
+			.ta-center
+				ul.category-menu
+					li.wow.fadeIn(data-wow-delay="0.2s"): a(href="#")
+						i.icm.icon-cat1
+						p Кухонная <br> мебель
+					li.wow.fadeIn(data-wow-delay="0.4s"): a(href="#")
+						i.icm.icon-forhome
+						p Кухонная <br> мебель
+					li.wow.fadeIn(data-wow-delay="0.6s"): a(href="#")
+						i.icm.icon-cat3
+						p Кухонная <br> мебель
+			.content
+				p Мебель для персонала является основным украшением офисного помещения. Она должна быть компактной, практичной, стильной и многофункциональной, учитывая тот факт, что у офисных сотрудников обычно много работы с документацией. Также мебель должна быть выполнена из прочных натуральных материалов, что гарантирует безопасность изделий для здоровья человека. 
+				p Руководителю компании необходимо заботиться о комфорте не только своего рабочего места. Учеными доказано, что, когда работник чувствует себя уютно, его способности и желание работать увеличиваются в разы. По этой причине мебель для персонала должна быть комфортной, радовать глаз, создавать приятную атмосферу, не нарушая при этом нормы делового стиля.
+				p Кресла и стулья являются неотъемлемой частью офисной мебели. Для руководителей мы предлагаем кожаные кресла самого высокого качества. Для персонала и посетителей мы предлагаем не менее удобные многофункциональные офисные кресла и стулья, которые не станут причиной дискомфорта во время работы или ожидания. Увидеть наши кресла и стулья можно в наших салонах «Стиль» в торговом комплексе «Галактика» по улице Стасова, 182 в Краснодаре и по адресу Тургеневское шоссе 12А.
+				p В каталоге вы также найдете многофункциональные вешалки для верхней одежды, которые идеально подойдут в любой офисный интерьер. Все они выполнены из натуральных, экологичных материалов, что гарантирует долговременность их службы, а также подтверждает высокое качество товара.
+	section.home-about.ovh
+		.container
+			.clearfix
+				.col-50.wow.fadeInLeftShort
+					h2 Салон "Стиль"
+						p работает с 2002 года
+					.content
+						p Мы предлагаем купить мебель в Краснодаре достаточно дешево, воспользовавшись нашим каталогом товаров. У нас вы всегда найдете скидки и эксклюзивные предложения – салон «Стиль» разрушает представление о том, что качество стоит дорого. Посетив наш мебельный салон, вы можете лично оценить качество и функциональность мебели, протестировать ее перед покупкой.
+						p Выбрать и заказать мебель вы также можете в каталоге на нашем сайте – это особенно удобно для занятых людей, которые знают, чего хотят.
+					a(href="#").btn.btn--transp
+						| Каталог 
+						i.icm.icon-lartr
+				.col-50.wow.fadeInRightShort
+					img.full-size(src="img/home-about-chair.jpg", alt="")
+	section.home-features
+		.container
+			.top
+				h2.wow.fadeInUpShort Покупки в салоне «Стиль» — выгодное вложение финансовых средств
+				p.wow.fadeInUpShort Мы заботимся о наших клиентах. Нам важно, чтобы покупатели покидали наши салоны-магазины в отличном настроении, довольные совершенной покупкой. Вы можете быть уверены в следующих моментах:
+			ul.home-features__list
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name быстрое оформление заказа
+						p в режиме онлайн или по телефону, а также в салонах-магазинах
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name Широкий ассортимент товара
+						p по сниженным ценам
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name Возможность рассрочки
+						p приобретайте товар на выгодных условиях
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name Высокое качество продукции
+						p Мы предлагаем своим покупателям только качественную мебель
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name специальные предложения
+						p которые сделают ваши покупки ещё приятнее
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name Складская программа
+						p позволяет осуществлять поставку мебели уже в день ее оплаты
+				li.home-features__item.wow.fadeInUpShort
+					.icon
+						i.icm.icon-check
+					.text
+						p.name Создание уникальной мебели
+						p для оформления помещений любого назначения <br> по индивидуальным эскизам
+
+
+
+
