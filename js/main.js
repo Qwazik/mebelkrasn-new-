@@ -24,7 +24,7 @@ $(function(){
 	});
 
 	$('.parallax-window').css('background-image','none');
-	$('.parallax-window').parallax({imageSrc:'/img/header-bg.jpg'});
+	$('.parallax-window').parallax({imageSrc:'img/header-bg.jpg'});
 
 
 	//other

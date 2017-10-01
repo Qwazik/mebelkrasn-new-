@@ -3821,7 +3821,7 @@ button.swiper-pagination-bullet {
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-rouble:before {
-  content: "\e917";
+  /*content: "\e917";*/
   vertical-align: -1px;
   font-size: .9em; }
 
