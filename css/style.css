@@ -3946,7 +3946,8 @@ h2, .h2 {
     font-size: 20px;
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal; }
+    font-weight: normal;
+    display: block; }
 
 a {
   color: #324ea7;
